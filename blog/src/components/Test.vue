@@ -3,6 +3,7 @@
     <h1>Hello from the Home component</h1>
     <h2>{{ data }}</h2>
     <h3>{{ msg }}</h3>
+    <button v-on:click="hello('call hello')">Call hello Function</button>
   </div>
 </template>
 
@@ -12,6 +13,11 @@ export default {
   props: {
     data: String,
     msg: String,
+  },
+  methods: {
+    hello(data) {
+      alert(data);
+    },
   },
 };
 </script>
