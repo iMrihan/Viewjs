@@ -1,17 +1,17 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <Home />
+  <DataBinding />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Home from "./components/Home.vue";
+import DataBinding from "./components/DataBinding.vue";
 
 export default {
   name: "App",
   components: {
-    Home,
+    DataBinding,
   },
 };
 </script>
