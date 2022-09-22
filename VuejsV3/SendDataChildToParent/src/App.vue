@@ -1,16 +1,29 @@
 <template>
-  <Home />
+  <h1>Sent Data Child To Parent</h1>
+  <h2>{{ childUser }}</h2>
+  <User :getUser="getUser" />
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import Home from "./components/Home.vue";
+import User from "./components/User.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-    Home,
+    User,
+  },
+  data() {
+    return {
+      childUser: "",
+    };
+  },
+
+  methods: {
+    getUser(name) {
+      this.childUser = name;
+    },
   },
 };
 </script>
