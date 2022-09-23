@@ -8,6 +8,10 @@
   <router-link to="/profile/bruce">Bruce Profile Page</router-link>
   <br />
 
+  <router-link to="/hi/xyz">xyz</router-link>
+  <br />
+  <router-link to="/hello/broken-link">Broken Link</router-link>
+  <br />
   <router-view></router-view>
 </template>
 

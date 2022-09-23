@@ -3,6 +3,7 @@ import Home from "./components/Home.vue";
 import Login from "./components/Login.vue";
 
 import Profile from "./components/Profile.vue";
+import PageNotFound from "./components/PageNotFound.vue";
 const routes = [
   {
     name: "Home",
@@ -18,6 +19,12 @@ const routes = [
     name: "Login",
     path: "/login",
     component: Login,
+  },
+
+  {
+    name: "PageNotFound",
+    path: "/:pathMatch(.*)*",
+    component: PageNotFound,
   },
 ];
 
