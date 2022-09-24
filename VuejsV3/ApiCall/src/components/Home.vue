@@ -1,17 +1,20 @@
 <template>
   <div>
-    <h1>Home Component</h1>
-    <p v-for="item in list" :key="item">
-      {{ item.id }} --- {{ item.email }}---- {{ item.first_name }} -----{{
-        item.last_name
-      }}
-      <img :src="item.avatar" alt="" />
-    </p>
+    <h1>User Data</h1>
+
+    <ul class="item" v-for="item in list" :key="item">
+      <li>{{ item.id }}</li>
+      <li>{{ item.email }}</li>
+      <li>{{ item.first_name }}</li>
+      <li>{{ item.last_name }}</li>
+      <li>
+        <img :src="item.avatar" alt="" />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { assertDeclareModuleExports } from "@babel/types";
 import axios from "axios";
 
 export default {
@@ -30,4 +33,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.item {
+  display: flex;
+}
+.item li {
+  border: 1px solid;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+</style>
